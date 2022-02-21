@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1">
+<title>Home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+
+<!-- ChatBot -->
+<link rel="stylesheet" type="text/css" href="css/jquery.convform.css">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.convform.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+</head>
+<body>
+<!-- ChatBot -->
+
+<div class="chat_box active">
+	<div class="my-conv-form-wrapper type2">
+		<form action="" method="GET" class="hidden">
+			<input type="text" data-conv-question="Voila! &#x1F929;.." data-no-answer="true">
+			<input type="text" data-conv-question="초면인데..<br>우리 조금씩 알아가요!" data-no-answer="true">
+
+			<input type="text" name="name" data-conv-question="이름이<br>뭐에요?!&#x1F440;">
+			<input type="text" data-conv-question="{name}님,<br>만나서 반가워요!&#x1F44B;&#x1F44B;" data-no-answer="true">
+			<!--
+			<select data-conv-question="실례지만,<br>미혼이신가요?&#x1F440;" name="married">
+				<option value="Yes">네, 미혼이에요</option>
+				<option value="No">아니요, 저는 결혼했어요</option>
+			</select>
+	
+			<div data-conv-fork="married">
+				<div data-conv-case="No">
+					<select data-conv-question="그럼 아이&#x1F476;는<br>있으신가요?" name="child">
+					  <option value="yes">네, 아이가 있어요</option>
+					  <option value="no">아니요. 아이는 없어요</option>
+					  <option value="soon">곧 출산예정이에요</option>
+					</select>
+				</div>
+			</div>
+			<input type="text" data-conv-question="Awesome! &#x1F44B;&#x1F44B;" data-no-answer="true"> 
+			-->
+            <input type="text" name="name" data-conv-question="간단하게 10가지<br>질문을 드릴께요!" data-no-answer="true"> 
+			<select data-conv-question="편하게 답변해주세요&#x1F60A;">
+				<option value="Yes">네, 준비됬어요</option>
+			</select>
+
+			<input type="text" name="name" data-conv-question="좋아요! {name}님은<br><strong>어떤 타입</strong>일까요?" data-no-answer="true"> 
+
+			<select data-conv-question="보험가입 전에<br>어떤 상품을 가입할지<br>정해놓고 진행하나요?&#x270D;" name="Q1">
+				<option value="Yes">그렇다</option>
+				<option value="No">아니다</option>
+			</select>
+
+			<select data-conv-question="오! 그렇군요&#x1F914;<br>그럼 보험료가 비쌀수록<br>좋은 상품일거라고<br>확신하는 편인가요?" name="Q2">
+				<option value="Yes">그렇다</option>
+				<option value="No">아니다</option>
+			</select>
+			
+			<select data-conv-question="좋습니다!..<br>보통 보험을 가입할 때,<br><strong>주변인에게 추천받은<br>사람</strong>에게 가입 할 예정인가요?&#x1F9D0;" name="Q3">
+				<option value="Yes">그렇다</option>
+				<option value="No">아니다</option>
+			</select>
+
+			<select data-conv-question="{name}님,<br><strong>연금보험</strong>과<br><strong>연금저축보험</strong>의 차이를<br>알고있으신가요?&#x1F644;" name="Q4">
+				<option value="Yes">그렇다</option>
+				<option value="No">아니다</option>
+			</select>
+
+			<input type="text" data-conv-question="거의 다 끝나가요<br>조금만 더 힘내주세요!&#x1F4AA;" data-no-answer="true">
+
+			<select data-conv-question="혹시 노후를 위해 <br>별도의 플랜을 세웠거나<br>지키고 있나요?&#x1F914;" name="Q5">
+				<option value="Yes">그렇다</option>
+				<option value="No">아니다</option>
+			</select>
+
+			<input type="text" data-conv-question="결과를 받아보기 위한<br>간단한 정보를<br>입력해 주실래요?&#x1F913;" data-no-answer="true">
+			
+			<select name="gender" data-conv-question="성별을<br>알려주세요&#x1F468;&#x1F469;">
+				<option value="Male">남자</option>
+				<option value="Female">여자</option>
+			</select>
+			<input type="text" name="birth" data-conv-question="&#x1F382;생년월일을<br>입력해주세요!<br>(예 19901123)">
+
+			<select data-conv-question="이제 {name}님의<br><strong>분석결과</strong>를 볼까요!&#x1F648;">
+				<option value="Yes">네, 궁금해요!</option>
+			</select>
+			<input type="text" data-conv-question="분석 진행중..." data-no-answer="true">
+  	</form>
+	</div>
+</div>
+<!-- ChatBot end -->
+
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>
