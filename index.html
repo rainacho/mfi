@@ -29,53 +29,70 @@
 
 			<input type="text" name="name" data-conv-question="이름이<br>뭐에요?!&#x1F440;">
 			<input type="text" data-conv-question="{name}님,<br>만나서 반가워요!&#x1F44B;&#x1F44B;" data-no-answer="true">
-			<!--
-			<select data-conv-question="실례지만,<br>미혼이신가요?&#x1F440;" name="married">
-				<option value="Yes">네, 미혼이에요</option>
-				<option value="No">아니요, 저는 결혼했어요</option>
-			</select>
-	
-			<div data-conv-fork="married">
-				<div data-conv-case="No">
-					<select data-conv-question="그럼 아이&#x1F476;는<br>있으신가요?" name="child">
-					  <option value="yes">네, 아이가 있어요</option>
-					  <option value="no">아니요. 아이는 없어요</option>
-					  <option value="soon">곧 출산예정이에요</option>
-					</select>
-				</div>
-			</div>
-			<input type="text" data-conv-question="Awesome! &#x1F44B;&#x1F44B;" data-no-answer="true"> 
-			-->
-            <input type="text" name="name" data-conv-question="간단하게 10가지<br>질문을 드릴께요!" data-no-answer="true"> 
+			
+            <input type="text" name="name" data-conv-question="간단하게 12가지<br>질문을 드릴께요!" data-no-answer="true"> 
 			<select data-conv-question="편하게 답변해주세요&#x1F60A;">
 				<option value="Yes">네, 준비됬어요</option>
 			</select>
 
 			<input type="text" name="name" data-conv-question="좋아요! {name}님은<br><strong>어떤 타입</strong>일까요?" data-no-answer="true"> 
 
-			<select data-conv-question="보험가입 전에<br>어떤 상품을 가입할지<br>정해놓고 진행하나요?&#x270D;" name="Q1">
-				<option value="Yes">그렇다</option>
-				<option value="No">아니다</option>
-			</select>
+			<select data-style="long" data-conv-question="나는 노후를 위해<br>별도의 플랜을<br>세웠거나 지키고 있다&#x270D;" name="Q1">
+				<option value="Yes">그렇다, 노후대비는 철저히!</option>
+				<option value="No">아직 그렇게 중요하다고 생각하지 않는다</option>
+			</select>   
 
-			<select data-conv-question="오! 그렇군요&#x1F914;<br>그럼 보험료가 비쌀수록<br>좋은 상품일거라고<br>확신하는 편인가요?" name="Q2">
-				<option value="Yes">그렇다</option>
-				<option value="No">아니다</option>
+			<select data-conv-question="나는 소비와 지출에<br>계획적인 편이며,<br>중강기적 목표를 세워<br>나의 자산을<br>관리하는 편이다" name="Q2">
+				<option value="Yes">이번달에 얼마 썼더라...?</option>
+				<option value="No">아무렴! 백원도 놓치지 않지!</option>
 			</select>
 			
-			<select data-conv-question="좋습니다!..<br>보통 보험을 가입할 때,<br><strong>주변인에게 추천받은<br>사람</strong>에게 가입 할 예정인가요?&#x1F9D0;" name="Q3">
-				<option value="Yes">그렇다</option>
+			<select data-conv-question="보험은 내가 원할 때<br>아무때나 가입할 수<br>있다고 생각한다&#x1F9D0;" name="Q3">
+				<option value="Yes">그렇지 안나...?</option>
+				<option value="No">아니다, 다 공부해놓았지!</option>
+			</select>
+
+			<select data-conv-question="내가 죽고난 후,가족에게<br>보험금을 남기는건<br>무의미 하다고 생각한다" name="Q4">
+				<option value="Yes">그렇다. 내가 죽으면 다 무슨 소용?</option>
+				<option value="No">아니다. 필요하다</option>
+			</select>
+
+			<select data-conv-question="나는 질병에 걸리는건<br>조심해서 되는게 아닌<br>하늘의 뜻이라고 생각한다" name="Q5">
+				<option value="Yes">슬프지만 노력한다고 되는게 아니라고 생각한다</option>
+				<option value="No">건강을 열심히 챙기면 피해갈 수 있다고 생각한다</option>
+			</select>
+
+			<select data-conv-question="나는 보험가입을 할때<br>주변인의 추천을 받아<br>가입하는게 속편하다고 생각한다&#x1F914;" name="Q6">
+				<option value="Yes">그렇다, 지인이 설마 날 속이겠어?</option>
+				<option value="No">아니다, 내가 스스로 찾는게 안심된다</option>
+			</select>
+
+			<select data-conv-question="금융앱을 통해 우연히<br>평점도 좋고 저렴한<br>보험상품을 발견했다.<br>당신의 생각은?&#x1F914;" name="Q7">
+				<option value="Yes">오 핵이득! 좋아 당장 가입하겠어</option>
+				<option value="No">싼건 다 비지떡이야! 조금이라도 의심이 가면 가입 NO!</option>
+			</select>
+
+			<select data-conv-question="나는 보험이<br>필수적이지 않으며<br>건강보험(의료보험)으로<br>충분하다고 생각한다" name="Q8">
+				<option value="Yes">그렇다, 당장 보험은 불필요하다</option>
+				<option value="No">아니다, 나는 병원비가 얼마나 무서운지 알고 있다</option>
+			</select>  
+
+			<select data-conv-question="나는 지금 당장<br>보험가입하는 것보다<br>그 돈으로 투자(주식)등이<br>가치있다고 생각한다" name="Q9">
+				<option value="Yes">맞다</option>
 				<option value="No">아니다</option>
 			</select>
 
-			<select data-conv-question="{name}님,<br><strong>연금보험</strong>과<br><strong>연금저축보험</strong>의 차이를<br>알고있으신가요?&#x1F644;" name="Q4">
-				<option value="Yes">그렇다</option>
-				<option value="No">아니다</option>
+			<select data-conv-question="나는 귀가 얇은편이라<br>다른 사람의 의견을 믿고<br>따르는 편이다" name="Q10">
+				<option value="Yes">절대! 중요한선택은 무조건 나 스스로 해야지!</option>
+				<option value="No">으르신들말 들어 나쁠 것 없다지?</option>
 			</select>
 
-			<input type="text" data-conv-question="거의 다 끝나가요<br>조금만 더 힘내주세요!&#x1F4AA;" data-no-answer="true">
+			<select data-conv-question="은행에서 적금을<br>가입하려고 한다.<br>당신의 선택은?" name="Q11">
+				<option value="Yes">내 눈으로 보고 꼼꼼히! 온라인 개설 원츄!</option>
+				<option value="No">은행원에게 하나하나 설명을 듣는게 마음이 놓인다</option>
+			</select>
 
-			<select data-conv-question="혹시 노후를 위해 <br>별도의 플랜을 세웠거나<br>지키고 있나요?&#x1F914;" name="Q5">
+			<select data-conv-question="나는 무언가를 시작하면<br>여기저기 돌아다니며<br>파헤치고 분석하는<br>스타일이다" name="Q12">
 				<option value="Yes">그렇다</option>
 				<option value="No">아니다</option>
 			</select>
