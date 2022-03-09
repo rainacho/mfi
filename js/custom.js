@@ -41,7 +41,7 @@ $(document).ready(function() {
 		'background':'whitesmoke',
 		'height' : '40px',
 		'margin-top' : '10px',
-		'color' : '#02a5af' 
+		'color' : '#02a5af'
 	});
 
 	$('div.conv-form-wrapper div.options div.option').css('font-size','1.1rem');

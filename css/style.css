@@ -1,6 +1,19 @@
 *,*::before,*::after {
   box-sizing: border-box;
 }
+
+/* 디바이스 기본스타일 초기화 */
+button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled) { cursor: pointer; }
+div.conv-form-wrapper * { scrollbar-width: none; -ms-overflow-style: none; }
+button, [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; }
+button, [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; }
+button, select { text-transform: none; }
+button, input { overflow: visible; }
+input, button, select, optgroup, textarea { margin: 0; font-family: inherit; font-size: inherit; line-height: inherit; }	
+button, [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; }
+button, select { text-transform: none; }
+button, input { overflow: visible; }
+
 body{
 	margin: 0;
 	font-family: 'Noto Sans KR', sans-serif;
@@ -295,6 +308,11 @@ input[type="submit"]{
 .chat_box{
 	background:#efefef;
 	transition: all 0.3s ease-out;
+	display: none;
+}
+
+.chat_box.active {
+	display: block;
 }
 
 div.conv-form-wrapper.type2 div#messages div.message.to {
@@ -311,6 +329,10 @@ div.conv-form-wrapper.type2 div.options div.option {
 	border: 1px solid #02a5af;
 }
 
+div.conv-form-wrapper div.options div.option.selected {
+	color:#fff;
+}
+
 div.conv-form-wrapper div#messages{
 	padding: 20px;
 }
@@ -321,6 +343,15 @@ div.conv-form-wrapper div#messages{
 }
 .hidden{
 	display: none !important;
+}
+
+/* 결과화면 */
+.result_box {
+	display: none;
+}
+
+.result_box.active {
+	display: block;
 }
 
 /* 라이브러리 custom */
@@ -348,6 +379,11 @@ div.conv-form-wrapper div.options {
 	background-color: whitesmoke !important;
 	transform: translateY(57px) !important;
 	z-index: 100 !important;
+}
+
+form.convFormDynamic button.submit.type2 {
+    position: relative;
+    z-index: 200;
 }
 
 /* chatbot character

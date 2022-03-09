@@ -140,6 +140,7 @@ ConvState.prototype.printAnswers = function(answers, multiple){
                         }
                     }.bind(this));
                 this.wrapper.find('div.options').append(option);
+                $('form.convFormDynamic > button.submit').addClass('type2')// 추가
                 $(window).trigger('dragreset');
             }
         }
@@ -157,6 +158,7 @@ ConvState.prototype.printAnswers = function(answers, multiple){
                         $('#userInput').blur(); //수정
                     }.bind(this));
                 this.wrapper.find('div.options').append(option);
+                $('form.convFormDynamic > button.submit').removeClass('type2')// 추가
                 $(window).trigger('dragreset');
             }
         }
@@ -263,7 +265,7 @@ ConvState.prototype.answerWith = function(answerText, answerObject) {
         var originalFormHtml = $(wrapper).html();
         $(this).addClass('conv-form-wrapper');
 
-        var parameters = $.extend(true, {}, {
+        var parameters = $.extend(true, {}, { 
             placeHolder : '여기에 입력해주세요',
             typeInputUi : 'textarea',
             timeOutFirstQuestion : 1200,
@@ -273,8 +275,33 @@ ConvState.prototype.answerWith = function(answerText, answerObject) {
             eventList : {
                 onSubmitForm : function(convState) {
                     console.log('completed');
-                    convState.form.submit();
-                    return true;
+                    let data = convState.answers;
+                    /* 실제 개발시 데이터 전송할때 사용할 코드 */
+                    /* 
+                    fetch('https://jsonplaceholder.typicode.com/posts',{
+                        method: 'POST',
+                        body: JSON.stringify(data),
+                        headers: {
+                            'Content-Type' : 'application/json'
+                        }
+                    })
+                    .then((res) => {
+                        return res.json();
+                    })
+                    .then((jsonObject) => {
+                        console.log(jsonObject.name.text);
+                        document.write(`당신의 이름은 ${jsonObject.name.text}입니다.`);
+                        //결과화면 뿌려주기
+                        $('.chat_box').removeClass('active');
+                        $('.result_box').addClass('active');
+                    })
+                    .catch(error => console.log('Error:', error));
+                    */
+
+                    /* 퍼블단계에서 사용할 코드 */
+                    //$('.chat_box').removeClass('active');
+                    //$('.result_box').addClass('active');
+                    //document.write(`당신의 이름은 ${data.name.text}입니다.`);
                 },
                 onInputSubmit : function(convState, readyCallback) {
                     if(convState.current.input.hasOwnProperty('callback')) {
