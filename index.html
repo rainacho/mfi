@@ -93,35 +93,28 @@
 
 			<!-- S: 가족력 테스트 -->
 			<input type="text" data-conv-question="{name}님,<br>조금만 더 힘을 내주세요&#x1F4AA;" data-no-answer="true">
-			<input type="text" name="" data-conv-question="혹시 모를 <strong>유전적 질병</strong><br>위험에 대비하기 위한<br>질문을 시작할께요" data-no-answer="true"> 
+			<input type="text" name="" data-conv-question="혹시 모를 <strong>유전적 질병</strong><br>위험에 대비하기 위한<br>질문을 해볼께요" data-no-answer="true"> 
 
-			<select name="liverCancer" data-conv-question="간암을 앓고있는 가족이 있나요?">
+			<select name="checkFamilyHistory" data-conv-question="혹시 가족력이 있으신가요?">
 				<option value="Yes">네, 있습니다.</option>
 				<option value="No">아니요, 없습니다.</option>
 			</select>
-			<div data-conv-fork="liverCancer">
+			<div data-conv-fork="checkFamilyHistory">
 				<div data-conv-case="Yes">
-					<select name="lcmulti" data-conv-question="간암을 앓고있는 가족을 선택해주세요." multiple>
-						<option value="할머니">할머니</option>
-						<option value="할아버지">할아버지</option>
-						<option value="엄마">엄마</option>
-						<option value="아빠">아빠</option>
+					<select name="disease" data-conv-question="간암을 앓고있는 가족을 선택해주세요." multiple>
+						<option value="위암">위암</option>
+						<option value="뇌질환">뇌질환</option>
+						<option value="폐암">폐암</option>
+						<option value="간질환">간질환</option>
+						<option value="유방암">유방암</option>
+						<option value="폐질환">폐질환</option>
+						<option value="여성질환">여성질환</option>
+						<option value="간암">간암</option>
+						<option value="당뇨">당뇨</option>
 					</select>
 				</div>
 			</div>
-
-			<select name="breastCancer" data-conv-question="유방암을 앓고있는 가족이 있나요?">
-				<option value="Yes">네, 있습니다.</option>
-				<option value="No">아니요, 없습니다.</option>
-			</select>
-			<div data-conv-fork="breastCancer">
-				<div data-conv-case="Yes">
-					<select name="bcmulti" data-conv-question="유방암을 앓고있는 가족을 선택해주세요." multiple>
-						<option value="할머니">할머니</option>
-						<option value="엄마">엄마</option>
-					</select>
-				</div>
-			</div>
+			
 			<!-- //E: 가족력 테스트-->
 			<input type="text" data-conv-question="결과를 받아보기 위한<br>간단한 정보가<br>필요해요..&#x1F913;" data-no-answer="true">
 			

@@ -329,12 +329,17 @@ div.conv-form-wrapper.type2 div.options div.option {
 	border: 1px solid #02a5af;
 }
 
+div.conv-form-wrapper.type2 div.options div.option:last-child {
+	margin-right: 50px;
+}
+
 div.conv-form-wrapper div.options div.option.selected {
 	color:#fff;
 }
 
 div.conv-form-wrapper div#messages{
 	padding: 20px;
+	bottom: 100px;
 }
 .my-conv-form-wrapper textarea{
 	height: 30px;
