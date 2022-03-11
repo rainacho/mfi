@@ -115,10 +115,13 @@ ConvState.prototype.printAnswers = function(answers, multiple){
     var opened = false;
     if(this.wrapper.find('div.options').height()!=0) opened = true;
     this.wrapper.find('div.options div.option').remove();
+    
+    let optionsHeight;
 
     if(multiple){
         for(var i in answers){
             if(answers.hasOwnProperty(i)){
+
                 var option = $('<div class="option">'+answers[i].text+'</div>')
                     .data("answer", answers[i])
                     .click(function(event){
@@ -140,13 +143,20 @@ ConvState.prototype.printAnswers = function(answers, multiple){
                         }
                     }.bind(this));
                 this.wrapper.find('div.options').append(option);
+
                 $('form.convFormDynamic > button.submit').addClass('type2')// 추가
                 $(window).trigger('dragreset');
             }
         }
+        /* 다중답변(3개 이상)일 경우 대화창 높이 조절 */
+        $('div.conv-form-wrapper div.options').addClass('multiple');
+        optionsHeight = $('.multiple').height();
+        $('.wrapper-messages').offset({top: (optionsHeight * -1) + 50});
+
     } else {
         for(var i in answers){
             if(answers.hasOwnProperty(i)){
+
                 var option = $('<div class="option">'+answers[i].text+'</div>')
                     .data("answer", answers[i])
                     .click(function(event){
@@ -376,10 +386,10 @@ ConvState.prototype.answerWith = function(answerText, answerObject) {
 
             switch(parameters.typeInputUi) {
                 case 'input':
-                    inputForm = $('<form id="' + parameters.formIdName + '" class="convFormDynamic"><div class="options dragscroll"></div><input id="' + parameters.inputIdName + '" type="text" placeholder="'+ parameters.placeHolder +'" class="userInputDynamic"></><button type="submit" class="submit">'+parameters.buttonText+'</button><span class="clear"></span></form>');
+                    inputForm = $('<form id="' + parameters.formIdName + '" class="convFormDynamic"><div class="options dragscroll"></div><input id="' + parameters.inputIdName + '" type="text" placeholder="'+ parameters.placeHolder +'" class="userInputDynamic"></><button type="submit" class="submit"></button><span class="clear"></span></form>');
                     break;
                 case 'textarea':
-                    inputForm = $('<form id="' + parameters.formIdName + '" class="convFormDynamic"><div class="options dragscroll"></div><textarea id="' + parameters.inputIdName + '" rows="1" placeholder="'+ parameters.placeHolder +'" class="userInputDynamic"></textarea><button type="submit" class="submit">'+parameters.buttonText+'</button><span class="clear"></span></form>');
+                    inputForm = $('<form id="' + parameters.formIdName + '" class="convFormDynamic"><div class="options dragscroll"></div><textarea id="' + parameters.inputIdName + '" rows="1" placeholder="'+ parameters.placeHolder +'" class="userInputDynamic"></textarea><button type="submit" class="submit"></button><span class="clear"></span></form>');
                     break;
                 default :
                     console.log('typeInputUi must be input or textarea');
@@ -523,6 +533,9 @@ ConvState.prototype.answerWith = function(answerText, answerObject) {
                                 $(this).removeClass('glow');
                                 $(this).parent('form').submit();
                             }
+                            // 수정 : 다중답안 선택 후 답안지 높이 초기화
+                            $('div.conv-form-wrapper div.options').removeClass('multiple');
+                            $('.wrapper-messages').offset({top: 0}); 
                         }
                     }
                 } else {

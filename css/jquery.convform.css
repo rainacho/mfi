@@ -310,11 +310,11 @@ form.convFormDynamic button.submit {
     outline: none !important;
 }
 
-
+/* 수정
 form.convFormDynamic button.submit:hover {
     background: #06b79a;
     color: #fff;
-}
+}*/
 
 button.submit.glow {
     box-shadow: 0 0 10px 5px rgba(6, 197, 166, 0.4);

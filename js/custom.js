@@ -37,13 +37,6 @@ $(document).ready(function() {
 		'padding-top': '10px'
 	});
 
-	$('form.convFormDynamic > button.submit').css({
-		'background':'whitesmoke',
-		'height' : '40px',
-		'margin-top' : '10px',
-		'color' : '#02a5af'
-	});
-
 	$('div.conv-form-wrapper div.options div.option').css('font-size','1.1rem');
 
 

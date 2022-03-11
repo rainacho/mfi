@@ -390,6 +390,23 @@ form.convFormDynamic button.submit.type2 {
     z-index: 200;
 }
 
+div.conv-form-wrapper div.options.multiple {
+	overflow: unset;
+    white-space: unset;
+}
+
+form.convFormDynamic button.submit {
+	background: whitesmoke;
+    height: 40px;
+    margin-top: 10px;
+    color: rgb(2, 165, 175);
+    background-image: url(../images/send_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 67%;
+    background-position: center;
+}
+
 /* chatbot character
 div.conv-form-wrapper div.message.done:first-child::before {
 	content: '';

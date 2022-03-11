@@ -89,7 +89,7 @@
 			<select data-conv-question="나는 무언가를 시작하면<br>여기저기 돌아다니며<br><strong>파헤치고 분석하는</strong><br>스타일이다" name="12">
 				<option value="E">그렇다&#x1F646;</option>
 				<option value="I">아니다&#x1F645;</option>
-			</select>
+			</select> 
 
 			<!-- S: 가족력 테스트 -->
 			<input type="text" data-conv-question="{name}님,<br>조금만 더 힘을 내주세요&#x1F4AA;" data-no-answer="true">
@@ -115,15 +115,14 @@
 				</div>
 			</div>
 			
-			<!-- //E: 가족력 테스트-->
 			<input type="text" data-conv-question="결과를 받아보기 위한<br>간단한 정보가<br>필요해요..&#x1F913;" data-no-answer="true">
 			
 			<select name="gender" data-conv-question="먼저 성별을<br>알려주세요&#x1F468;&#x1F469;">
 				<option value="Male">남자</option>
 				<option value="Female">여자</option>
 			</select>
-			<input type="text" name="contact" data-conv-question="{name}님의 핸드폰번호를<br>입력해주세요!&#x1F382;">
-			<input type="text" name="birth" data-conv-question="{name}님의 생년월일을<br>입력해주세요!&#x1F382;<br>(예 19901123)">
+			<input type="tel" name="contact" data-pattern="^01([0|1|6|7|8|9])([0-9]{3,4})([0-9]{4})$" data-conv-question="{name}님의 핸드폰번호를<br>입력해주세요!<br>(예 01012345678)">
+			<input type="text" name="birth" data-pattern="^(19[0-9][0-9]|20\d{2})(0[0-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$" data-conv-question="{name}님의 생년월일을<br>8자리를 입력해주세요!&#x1F382;<br>(예 19901123)">
 			
 			<select data-conv-question="이제 {name}님의<br><strong>분석결과</strong>를 볼까요!&#x1F648;">
 				<option value="Yes">네, 궁금해요!</option>
